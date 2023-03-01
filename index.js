@@ -17,14 +17,15 @@ app.use(express.json());
 app.use(cors())
 
 app.post('/sendnotification', (req , res)=>{
-    const message = {
-        notification : {title : "Paperless Cart Updated" , body: "Click to Open"},
-        tokens : req.body.tokens
-    }
+  console.log(req.body)
+    // const message = {
+    //     notification : {title : "Paperless Cart Updated" , body: "Click to Open"},
+    //     tokens : req.body.tokens
+    // }
     
-    admin.messaging().sendMulticast(message).then(resp=>{
-        console.log('notification send')
-    }).catch(err=>console.log(err))
+    // admin.messaging().sendToDevice(message).then(resp=>{
+    //     console.log('notification send')
+    // }).catch(err=>console.log(err))
 
 }) 
 app.get('/', (req,res)=>{
