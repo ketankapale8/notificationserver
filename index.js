@@ -14,7 +14,7 @@ admin.initializeApp({
 });
 
 app.use(express.json());
-// app.use(cors())
+app.use(cors())
 
 app.post('/sendnotification', (req , res)=>{
     const message = {
@@ -26,7 +26,7 @@ app.post('/sendnotification', (req , res)=>{
         console.log('notification send')
     }).catch(err=>console.log(err))
 
-})
+}) 
 app.get('/', (req,res)=>{
   res.send('Notification Server running...')
 })
