@@ -14,10 +14,9 @@ admin.initializeApp({
 });
 
 app.use(express.json());
-app.use(cors())
+// app.use(cors())
 
 app.post('/sendnotification', (req , res)=>{
-    console.log(req.body)
     const message = {
         notification : {title : "Paperless Cart Updated" , body: "Click to Open"},
         tokens : req.body.tokens
