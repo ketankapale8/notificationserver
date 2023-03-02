@@ -3,7 +3,7 @@ import { getAllTokens } from '../controllers/Tokens.js';
 
 const router = express.Router();
 
-router.post('/gettokens' , getAllTokens)
+router.post('/sendnotification' , getAllTokens)
 
 export default router;
 
